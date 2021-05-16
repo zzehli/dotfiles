@@ -1,0 +1,28 @@
+* Debug
+  #+BEGIN_SRC emacs-lisp
+    (setq debug-on-error 1)
+  #+END_SRC
+* Org interface
+  #+begin_src emacs-lisp
+    ;;Org-Mode config
+    (use-package org-bullets
+      :ensure t
+      :init
+      ;;(setq org-bullets-face-name (quote (org-bullet-face)))
+      ;;(setq org-bullets-bullet-list '("◉" "✿" "○" "◎" "►" "◇"))
+      :config
+      (add-hook 'org-mode-hook (lambda () (org-bullets-mode 1))))
+  #+end_src
+
+  #+RESULTS:
+  : t
+* Org manipulation
+  #+begin_src emacs-lisp
+    ;;insert code block with shortcut <s
+    ;;(require 'org-tempo)
+  #+end_src
+
+;; org mode: add time stamp to TODO
+;;(add-hook 'org-after-todo-state-change-hook #'my/log-todo-creation-date)
+;;(setq org-treat-insert-todo-heading-as-state-change t)
+
